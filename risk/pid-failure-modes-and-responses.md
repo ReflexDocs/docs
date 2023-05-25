@@ -6,11 +6,11 @@ description: How to react in different scenarios where the redemption rate is in
 
 ## Failure Scenarios
 
-The following is a list of known PID failure modes and possible responses or fixes for each one of them. Note that in order to minimize the risk of the PID failing, governance should activate it only after the stablecoin has a minimum, mandatory liquidity level on exchanges as well as plenty of users interacting with the system. 
+The following is a list of known PID failure modes and possible responses or fixes for each one of them. Note that in order to minimize the risk of the PID failing, governance should activate it only after the stablecoin has a minimum, mandatory liquidity level on exchanges as well as plenty of users interacting with the system.&#x20;
 
 ### Market Manipulation
 
-Although improbable \(in case the PID is fed a TWAP feed for the stablecoin market price\) after a stablecoin gets to scale, market manipulation is always a concern that can make the PID controller destabilize the system. In this scenario, governance has two options: pause the controller until there is more liquidity on exchanges or globally settle the system.
+Although improbable (in case the PID is fed a TWAP feed for the stablecoin market price) after a stablecoin gets to scale, market manipulation is always a concern that can make the PID controller destabilize the system. In this scenario, governance has two options: pause the controller until there is more liquidity on exchanges or globally settle the system.
 
 ### Lack of Liquidity on Exchanges
 
@@ -21,7 +21,7 @@ Governance must ensure at all times that there is enough stablecoins on exchange
 
 In case the stablecoin liquidity drops below any of the two limits specied above, governance is advised to pause the PID and restart it only after the liquidity improves.
 
-**NOTE**: lack of liquidity will increase the risk of market manipulation \(as seen in Proto RAI\).
+**NOTE**: lack of liquidity will increase the risk of market manipulation (as seen in Proto RAI).
 
 ### Skewed Incentives
 
@@ -50,4 +50,3 @@ In order to make market manipulation as expensive as possible, we propose the fo
 * At least 3% of the RAI supply must be on the exchange/s from which the system is pulling a price feed from
 
 In addition to this, the PID controller should not be set to its full force right when RAI is launched as it may destabilize the system.
-

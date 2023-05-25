@@ -37,7 +37,7 @@ The surplus auction is used to sell off a fixed amount of the surplus in exchang
 
 **Modifiers**
 
-* `isAuthorized` **** - checks whether an address is part of `authorizedAddresses` (and thus can call authed functions).
+* `isAuthorized` \*\*\*\* - checks whether an address is part of `authorizedAddresses` (and thus can call authed functions).
 
 **Functions**
 
@@ -48,7 +48,7 @@ The surplus auction is used to sell off a fixed amount of the surplus in exchang
 * `increaseBidSize(id: uint256`, `amountToBuy: uint256`, `bid: uint256)` - submit a bid with an increasing amount of protocol tokens for a fixed amount of system coins.
 * `disableContract()` - disable the contract.
 * `settleAuction(id: uint256)` - claim a winning bid / settles a completed auction.
-* `terminateAuctionPrematurely(id: uint256)` - is used in case Governance wishes to upgrade (only) the `PreSettlementSurplusAuctionHouse` or in case `GlobalSettlement` is triggered. It settles `increaseBidSize` phase auctions, sending back the protocol tokens submitted by the `highBidder`.&#x20;
+* `terminateAuctionPrematurely(id: uint256)` - is used in case Governance wishes to upgrade (only) the `PreSettlementSurplusAuctionHouse` or in case `GlobalSettlement` is triggered. It settles `increaseBidSize` phase auctions, sending back the protocol tokens submitted by the `highBidder`.
 
 **Events**
 
@@ -69,7 +69,7 @@ The surplus auction is used to sell off a fixed amount of the surplus in exchang
 * `StartAuction`- emitted when `startAuction(uint256`, `uint256)` is successfully executed. Contains:
   * `id` - auction id
   * `auctionsStarted` - total amount of auctions that have started up until now
-  * `amountToSell` - amount of system coins sold  in the auction.
+  * `amountToSell` - amount of system coins sold in the auction.
   * `initialBid` - starting bid for the auction
   * `auctionDeadline` - the auction's deadline
 * `SettleAuction` - emitted after an auction is settled. Contains:
@@ -87,7 +87,7 @@ In a surplus auction, bidders compete for a fixed `amountToSell` of system coins
 
 The surplus auction ends when the last bid's duration is passed (`bidDuration`) without another bid getting placed or when the auction duration (`totalAuctionLength`) has been surpassed. When the auction settles, the protocol tokens received are burnt in the case of a `BurningSurplusAuctionHouse` or transferred to a separate address in the case of `RecyclingSurplusAuctionHouse`.
 
-In case governance disables the surplus auction house by calling `disableContract`, anyone can call `terminateAuctionPrematurely` in order to quickly settle an auction and return the protocol token bid to the `highBidder`.&#x20;
+In case governance disables the surplus auction house by calling `disableContract`, anyone can call `terminateAuctionPrematurely` in order to quickly settle an auction and return the protocol token bid to the `highBidder`.
 
 ## 4. Gotchas (Potential source of user error)
 

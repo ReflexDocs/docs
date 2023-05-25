@@ -32,7 +32,7 @@ The `OracleRelayer` functions as an interface contract between `FSM`s and the `S
 
 **Modifiers**
 
-* `isAuthorized` **** - checks whether an address is part of `authorizedAddresses` (and thus can call authed functions).
+* `isAuthorized` \*\*\*\* - checks whether an address is part of `authorizedAddresses` (and thus can call authed functions).
 
 **Functions**
 
@@ -41,7 +41,7 @@ The `OracleRelayer` functions as an interface contract between `FSM`s and the `S
 * `modifyParameters(collateralType: bytes32`, `parameter: bytes32`, `data: address)` - update an `address` parameter.
 * `addAuthorization(usr: address)` - add an address to `authorizedAddresses`.
 * `removeAuthorization(usr: address)` - remove an address from `authorizedAddresses`.
-* `updateRedemptionPrice()` - internal function used to update the redemption price using the  `redemptionRate`
+* `updateRedemptionPrice()` - internal function used to update the redemption price using the `redemptionRate`
 * `redemptionPrice() external view returns (uint256)` - getter function that updates and retrieves the virtual `_redemptionPrice`
 * `updateCollateralPrice(collateralType: bytes32)` - update the safety and liquidation prices of a collateral price and store them in the `CDPEngine`
 * `disableContract()` - disables the relayer
@@ -71,25 +71,25 @@ The `OracleRelayer` functions as an interface contract between `FSM`s and the `S
 
 `updateCollateralPrice` is a non-authenticated function. The function takes in a `bytes32` representing a `collateralType` whose (safety and liquidation) prices need to be updated. `updateCollateralPrice` has three stages:
 
-1. `getResultWithValidity` - interacts with the `collateralType`'s `orcl` and returns a `value` and whether it  `isValid` (a boolean which is false if the price is invalid). The second external call only happens if `isValid == true`.
-2. When calculating the `safetyPrice` and the `liquidationPrice`, the `_redemptionPrice` is crucial as it defines the relationship between the system coin and one unit of collateral. The `value` from the `OSM` is  divided by the (updated) `redemptionPrice` (to get a ratio of collateral `value` to system coins) and then the result is divided again by the `collateralType.safetyCRatio` (when calculating the `safetyPrice`) and by the `collateralType.liquidationCRatio` (when calculating the `liquidationPrice`).
+1. `getResultWithValidity` - interacts with the `collateralType`'s `orcl` and returns a `value` and whether it `isValid` (a boolean which is false if the price is invalid). The second external call only happens if `isValid == true`.
+2. When calculating the `safetyPrice` and the `liquidationPrice`, the `_redemptionPrice` is crucial as it defines the relationship between the system coin and one unit of collateral. The `value` from the `OSM` is divided by the (updated) `redemptionPrice` (to get a ratio of collateral `value` to system coins) and then the result is divided again by the `collateralType.safetyCRatio` (when calculating the `safetyPrice`) and by the `collateralType.liquidationCRatio` (when calculating the `liquidationPrice`).
 3. `cdpEngine.modifyParameters` is then called to update the collateral's prices inside the system.
 
 ### Redemption Price
 
-Every time someone wants to read the `_redemptionPrice` its value will first be updated using the `redemptionRate` and then the output will be returned. We chose this design in order to ensure a smooth  `redemptionPrice` pro-ration (using the virtual variable + a state modifying getter).
+Every time someone wants to read the `_redemptionPrice` its value will first be updated using the `redemptionRate` and then the output will be returned. We chose this design in order to ensure a smooth `redemptionPrice` pro-ration (using the virtual variable + a state modifying getter).
 
 ### Updating the Redemption Rate
 
 Every time the `redemptionRate` is updated, the contract makes sure to bound the value that is can be set to.
 
-## 4. Gotchas <a id="4-gotchas"></a>
+## 4. Gotchas <a href="#4-gotchas" id="4-gotchas"></a>
 
 The methods in the `oracleRelayer` are relatively basic compared to most other portions of `geb`. There is not much room for user error in the single unauthed method `updateCollateralPrice`. If an incorrect `bytes32` is supplied the call will fail.
 
 Any module that is authed against the `oracleRelayer` has full root access, and can, therefore, add and remove which `collateralTypes` can be "updateCollateralPrice"'d. While not completely breaking the system, this could cause considerable risk. An authed caller can also update the `redemptionRate` and `redemptionPrice`, causing considerable impact depending on the values used.
 
-## 5. Failure Modes <a id="5-failure-modes"></a>
+## 5. Failure Modes <a href="#5-failure-modes" id="5-failure-modes"></a>
 
 #### Coding Error
 

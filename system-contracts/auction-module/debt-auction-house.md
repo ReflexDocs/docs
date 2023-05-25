@@ -38,7 +38,7 @@ Debt auctions are used to recapitalize the system by auctioning off protocol tok
 
 **Modifiers**
 
-* `isAuthorized` **** - checks whether an address is part of `authorizedAddresses` (and thus can call authed functions).
+* `isAuthorized` \*\*\*\* - checks whether an address is part of `authorizedAddresses` (and thus can call authed functions).
 
 **Functions**
 
@@ -49,7 +49,7 @@ Debt auctions are used to recapitalize the system by auctioning off protocol tok
 * `decreaseSoldAmount(id: uint256`, `amountToBuy: uint256`, `bid: uint256)` - submit a fixed system coin bid with an increasingly lower amount of protocol tokens you are willing to accept in exchange.
 * `disableContract()` - disable the contract.
 * `settleAuction(id: uint256)` - claim a winning bid / settles a completed auction
-*   `terminateAuctionPrematurely(id: uint256)` - used during `GlobalSettlement` to terminate&#x20;
+*   `terminateAuctionPrematurely(id: uint256)` - used during `GlobalSettlement` to terminate
 
     `decreaseSoldAmount`phase auctions and repay system coins (using `safeEngine.createUnbackedDebt` with the `accountingEngine` as the `debtDestination`) to the highest bidder.
 
@@ -62,9 +62,9 @@ Debt auctions are used to recapitalize the system by auctioning off protocol tok
 * `StartAuction`- emitted when `startAuction(address`, `uint256`, `uint256)` is successfully executed. Contains:
   * `id` - auction id
   * `auctionsStarted` - total amount of auctions that have started up until now
-  * `amountToSell` - amount of protocol tokens sold  in (to be minted after) the auction.
+  * `amountToSell` - amount of protocol tokens sold in (to be minted after) the auction.
   * `initialBid` - starting bid for the auction.
-  * `incomeReceiver` **** - address that receives the system coins from an auction (usually the `AccountingEngine`)
+  * `incomeReceiver` \*\*\*\* - address that receives the system coins from an auction (usually the `AccountingEngine`)
   * `auctionDeadline` - deadline for the auction with ID `id`
   * `activeDebtAuctions` - the current number of active debt auctions
 * `ModifyParameters` - emitted after a parameter is modified
@@ -91,14 +91,14 @@ Debt auctions are used to recapitalize the system by auctioning off protocol tok
 
 ## 3. Walkthrough <a href="#3-key-mechanisms-and-concepts" id="3-key-mechanisms-and-concepts"></a>
 
-The `DebtAuctionHouse` is a reverse auction, meaning that participants bid with increasingly lower amounts of protocol tokens they are willing to accept for a fixed amount of system coins. The auction will end when the latest bid duration (`bidDuration`) has passed since the last submitted bid or when the general auction deadline (`auctionStartTime + totalAuctionLength`) has been reached.&#x20;
+The `DebtAuctionHouse` is a reverse auction, meaning that participants bid with increasingly lower amounts of protocol tokens they are willing to accept for a fixed amount of system coins. The auction will end when the latest bid duration (`bidDuration`) has passed since the last submitted bid or when the general auction deadline (`auctionStartTime + totalAuctionLength`) has been reached.
 
 The first bidder will pay back the system debt (that the auction tries to cover) and submit their preference for the amount of protocol tokens they would like to receive. Each subsequent bid will pay back the previous (no longer winning) bidder. When the auction is over, the process ends by cleaning up the bid and minting protocol tokens for the winning bidder.
 
 If the auction expires without receiving any bids, anyone can restart the auction by calling `restartAuction(uint auction_id)`. This will do two things:
 
 1. It resets `bids[id].auctionDeadline` to `now + totalAuctionLength`
-2. It resets `bids[id].amountToSell` to `bids[id].amountToSell * amountSoldIncrease / ONE`&#x20;
+2. It resets `bids[id].amountToSell` to `bids[id].amountToSell * amountSoldIncrease / ONE`
 
 ## 4. Gotchas (Potential Source of User Error)
 

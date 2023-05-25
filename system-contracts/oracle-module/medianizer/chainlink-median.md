@@ -13,10 +13,10 @@ The `ChainlinkPriceFeedMedianizer` has a similar interface to the [Governance Le
 **Variables**
 
 * `authorizedAccounts [usr: address]` - `addAuthorization`/`removeAuthorization`/`isAuthorized` - auth mechanisms
-* `staleThreshold` - time since `linkAggregatorTimestamp` after which the median value is considered stale&#x20;
+* `staleThreshold` - time since `linkAggregatorTimestamp` after which the median value is considered stale
 * `chainlinkAggregator` - address of the Chainlink price reference contract
 * `rewardRelayer` - address of the contract that rewards addresses that call `updateResult`
-* `medianPrice` - latest fetched price&#x20;
+* `medianPrice` - latest fetched price
 * `lastUpdateTime` - latest timestamp when the contract pulled a price update from Chainlink
 * `multiplier` - scaling factor for the Chainlink result (e.g if the price has 8 decimals and we want it to be scaled to 18 decimals, `multiplier = 10` and `medianPrice = fetchedPrice * 10 ^ multiplier`)
 * `symbol` - the price oracle type (ex: ETHUSD)
@@ -25,7 +25,7 @@ The `ChainlinkPriceFeedMedianizer` has a similar interface to the [Governance Le
 
 **Modifiers**
 
-* `isAuthorized` **** - checks whether an address is part of `authorizedAddresses` (and thus can call authed functions).
+* `isAuthorized` \*\*\*\* - checks whether an address is part of `authorizedAddresses` (and thus can call authed functions).
 
 **Functions**
 
@@ -40,7 +40,7 @@ The `ChainlinkPriceFeedMedianizer` has a similar interface to the [Governance Le
   * `account` - the new authorized account
 * `RemoveAuthorization` - emitted when an address is de-authorized. Contains:
   * `account` - the address that was de-authorized
-* `ModifyParameters` **** - emitted when a parameter is updated
+* `ModifyParameters` \*\*\*\* - emitted when a parameter is updated
 * `UpdateResult` - emitted when `updateResult` is called. Contains:
   * `medianPrice` - the latest median price
   * `lastUpdateTime` - timestamp of the call

@@ -8,7 +8,7 @@ description: Governance contract for stopping FSM-like contracts
 
 This governance interface allows token holders to `stop()` FSM-like contracts in case of an oracle attack.
 
-## 2. Contract Variables & Functions <a id="2-contract-details"></a>
+## 2. Contract Variables & Functions <a href="#2-contract-details" id="2-contract-details"></a>
 
 **Variables**
 
@@ -30,7 +30,6 @@ This governance interface allows token holders to `stop()` FSM-like contracts in
 * `setAuthority(address: authority)` - change the contract's authority
 * `stop(bytes32: collateralType)` - stop a collateral type's `FSM`
 
-## 3. Walkthrough <a id="2-contract-details"></a>
+## 3. Walkthrough <a href="#2-contract-details" id="2-contract-details"></a>
 
-The `owner` and the `authority` can be changed using `setOwner` and `setAuthority`. The `owner` can `setFsm`s for each collateral type and any authed address \(be it the `owner`, `authority` or another address that was whitelisted in the `authority` contract\) can `stop` any `FSM`.
-
+The `owner` and the `authority` can be changed using `setOwner` and `setAuthority`. The `owner` can `setFsm`s for each collateral type and any authed address (be it the `owner`, `authority` or another address that was whitelisted in the `authority` contract) can `stop` any `FSM`.

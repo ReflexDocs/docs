@@ -41,4 +41,3 @@ Governance may set suboptimal parameters for:
 * Global Settlement which may delay SAFE processing and collateral redemption indefinitely
 
 There are many more parameters which may be suboptimal. Check the [System Contracts modules](https://docs.reflexer.finance/system-contracts/core) for more details.
-

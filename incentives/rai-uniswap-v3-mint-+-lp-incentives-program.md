@@ -18,7 +18,7 @@ There are 2 important conditions:
 
 When choosing the range, make sure to include both the redemption and the market price:
 
-![](../.gitbook/assets/Selection\_1126.png)
+<figure><img src="../.gitbook/assets/Selection_1126.png" alt=""><figcaption></figcaption></figure>
 
 You can find the redemption price at [https://stats.reflexer.finance/](https://stats.reflexer.finance/). The RAI market price will be displayed directly on the Uniswap v3 UI.
 
@@ -50,8 +50,8 @@ George: Mint 500 RAI + LP between 3.0281 and 3.0433 for a total position value o
 Robert: Mint 1000 RAI + LP between 3.0281 and 3.0372 for a total position value of $3038.97\
 Richard: Mint 1000 RAI + LP between 3.0342 and 3.0433 for a total position value of $3038.97
 
-* Bob earns earns 0 FLX rewards because his range is narrower than 5 ticks
-* Both Alice and Sophie are earning rewards. Alice earns twice more reward than Sophie because her range is half the size.&#x20;
+* Bob earns  0 FLX rewards because his range is narrower than 5 ticks
+* Both Alice and Sophie are earning rewards. Alice earns twice more rewards as Sophie because her range is half the size.&#x20;
 * George earns about half the rewards that Alice gets because his debt value is only 500 RAI (= $1519.48) which is only half of his position value ($3038.97).
 * Robert earns 0 FLX rewards because his range does not include the market price&#x20;
 * Richard earns 0 FLX rewards because his range does not include the redemption price

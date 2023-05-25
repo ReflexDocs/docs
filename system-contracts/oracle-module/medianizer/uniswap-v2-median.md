@@ -35,7 +35,7 @@ The `UniswapConsecutiveSlotsPriceFeedMedianizer` is integrated with Uniswap V2 i
 
 **Modifiers**
 
-* `isAuthorized` **** - checks whether an address is part of `authorizedAddresses` (and thus can call authed functions).
+* `isAuthorized` \*\*\*\* - checks whether an address is part of `authorizedAddresses` (and thus can call authed functions).
 
 **Functions**
 
@@ -55,7 +55,7 @@ The `UniswapConsecutiveSlotsPriceFeedMedianizer` is integrated with Uniswap V2 i
   * `account` - the new authorized account
 * `RemoveAuthorization` - emitted when an address is de-authorized. Contains:
   * `account` - the address that was de-authorized
-* `ModifyParameters` **** - emitted when a parameter is updated
+* `ModifyParameters` \*\*\*\* - emitted when a parameter is updated
 * `UpdateResult` - emitted when `updateResult` is called. Contains:
   * `medianPrice` - the latest median price for `targetToken`
   * `lastUpdateTime` - the current timestamp
@@ -68,7 +68,7 @@ The `UniswapConsecutiveSlotsPriceFeedMedianizer` is integrated with Uniswap V2 i
 
 `updateResult` first tries to update the `converterFeed` and the Uniswap pool before it stores new observations and computes the latest median.
 
-`read` will only return a result if the median is non-null, if `updateResult` has been successfully called at least `granularity` times, if the `validityFlag` is `1` and if  `timeElapsedSinceFirstObservation() <= maxWindowSize`. `getResultWithValidity` will return the median price and its validity (determined using the same checks as `read`).
+`read` will only return a result if the median is non-null, if `updateResult` has been successfully called at least `granularity` times, if the `validityFlag` is `1` and if `timeElapsedSinceFirstObservation() <= maxWindowSize`. `getResultWithValidity` will return the median price and its validity (determined using the same checks as `read`).
 
 ## 4. Gotchas
 

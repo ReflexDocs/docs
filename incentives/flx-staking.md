@@ -21,7 +21,7 @@ In exchange for protecting the protocol, stakers receive more FLX.
 ### Kovan
 
 * Exit delay (thawing period): 1 minute
-* Reward unlock period: 10 minutes. Locked rewards are unlocked linearly during a 10 minute time period from the moment a staker requests that they claim their rewards
+* Reward unlock period: 10 minutes. Locked rewards are unlocked linearly during a 10-minute time period from the moment a staker requests that they claim their rewards
 * Percentage of rewards unlocked over 10 minutes: 75%
 * Percentage of rewards that can be claimed right away (no unlock): 25%
 * Percentage of LP tokens in the pool that can be slashed/auctioned: 30% (the rest of the pool isn't auctioned/slashed)
@@ -48,30 +48,30 @@ The staking pool can read the amount of unbacked debt that the [accounting engin
 
 ## 4. Staking Walkthrough
 
-First, you need to provide liquidity in this [FLX/ETH Uniswap v2 pool](https://app.uniswap.org/#/add/v2/0x6243d8cea23066d098a15582d81a598b4e8391f4/ETH) for mainnet and in [this pool](https://app.uniswap.org/#/add/v2/0x6e6eA84bb2fcE17AfCE8e1117DdC708142ef51c9/ETH) for Kovan.
+First, you need to provide liquidity in this [FLX/ETH Uniswap v2 pool](https://app.uniswap.org/#/add/v2/0x6243d8cea23066d098a15582d81a598b4e8391f4/ETH) for mainnet and in [this pool](https://app.uniswap.org/#/add/v2/0x6e6eA84bb2fcE17AfCE8e1117DdC708142ef51c9/ETH) for Kovan
 
-![FLX/ETH Uniswap v2 Pool](../.gitbook/assets/lp.png)
+<figure><img src="../.gitbook/assets/lp.png" alt=""><figcaption></figcaption></figure>
 
 Once you receive your FLX/ETH LP tokens, head over [here](https://app.reflexer.finance/#/earn/staking) (for mainnet) and [here](https://app-kovan.reflexer.finance/earn/staking) (for Kovan) in order to see the staking dashboard.
 
-![](../.gitbook/assets/staking.png)
+<figure><img src="../.gitbook/assets/assets_-M9jdHretGKCtWYz5jZR_-MejbbQxhRawNgxNVMtn_-MejqP0ukmeMp9qdAfvp_staking.webp" alt=""><figcaption></figcaption></figure>
 
 In the Stake section, you can specify how many LP tokens you'd like to stake.&#x20;
 
-![](../.gitbook/assets/stake.png)
+<figure><img src="../.gitbook/assets/assets_-M9jdHretGKCtWYz5jZR_-MejbbQxhRawNgxNVMtn_-MejuGOFE8irlquwAyug_stake.webp" alt=""><figcaption></figcaption></figure>
 
 Once you stake, you will start to accrue rewards every block. You can claim rewards anytime using the **Claim Reward** button.
 
 When you want to start unstaking, you can head over to the **Unstaking** section.
 
-![](../.gitbook/assets/unstake.png)
+<figure><img src="../.gitbook/assets/assets_-M9jdHretGKCtWYz5jZR_-MejbbQxhRawNgxNVMtn_-Mek0WLA-IUfLoAM0oAN_unstake.webp" alt=""><figcaption></figcaption></figure>
 
 Unstaking must be done in two stages:
 
 * You request that a portion of your currently staked tokens should be unstaked
 * You wait for the full thawing period until you can get your LP tokens back from the staking contract
 
-![Thawing period passed and you can now withdraw your LP tokens](../.gitbook/assets/stflx.png)
+<figure><img src="../.gitbook/assets/assets_-M9jdHretGKCtWYz5jZR_-Mek3vPKEhsq6TqLDPwR_-MekGNwasD8z0nBQrMij_stflx.webp" alt=""><figcaption><p>Thawing period passed and you can now withdraw your LP tokens</p></figcaption></figure>
 
 **There are also several important things you must keep in mind when you unstake:**
 

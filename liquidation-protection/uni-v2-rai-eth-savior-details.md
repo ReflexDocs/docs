@@ -1,4 +1,4 @@
-# Uni-V2 RAI/ETH Savior Math
+# Uni-V2 RAI/ETH Savior Details
 
 The Uniswap V2 RAI/ETH savior allows users to deposit LP shares to protect their safe. Upon a liquidation attempt from a keeper, the savior will withdraw all RAI and ETH liquidity from Uniswap.&#x20;
 
@@ -105,4 +105,3 @@ Done! To that we have to add the flat $2000 keeper fee. Below is a calculation e
 {% embed url="https://docs.google.com/spreadsheets/d/1flg9LidXvxcAInw4-AtDCEFniMGoZg9fIgm-x36S3CA/edit#gid=0" %}
 
 The spreadsheet is available here, make a copy to test your own parameters: [https://docs.google.com/spreadsheets/d/1flg9LidXvxcAInw4-AtDCEFniMGoZg9fIgm-x36S3CA/edit#gid=0](https://docs.google.com/spreadsheets/d/1flg9LidXvxcAInw4-AtDCEFniMGoZg9fIgm-x36S3CA/edit#gid=0)
-

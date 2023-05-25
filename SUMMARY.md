@@ -93,5 +93,5 @@
 
 * [SAFE Protection](liquidation-protection/safe-protection.md)
 * [Liquidation Protection Guide](liquidation-protection/liquidation-protection-guide.md)
-* [Page 2](liquidation-protection/page-2.md)
-* [Page 3](liquidation-protection/page-3.md)
+* [Uni-V2 RAI/ETH Savior Details](liquidation-protection/uni-v2-rai-eth-savior-details.md)
+* [Curve V1 Savior Details](liquidation-protection/curve-v1-savior-details.md)

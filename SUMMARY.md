@@ -91,4 +91,7 @@
 
 ## liquidation protection
 
-* [Page 12](liquidation-protection/page-12.md)
+* [SAFE Protection](liquidation-protection/safe-protection.md)
+* [Liquidation Protection Guide](liquidation-protection/liquidation-protection-guide.md)
+* [Page 2](liquidation-protection/page-2.md)
+* [Page 3](liquidation-protection/page-3.md)

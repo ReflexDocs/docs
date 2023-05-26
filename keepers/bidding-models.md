@@ -4,7 +4,7 @@ description: Information about bidding models for debt and surplus auction keepe
 
 # Bidding Models
 
-`auction-keeper` maintains a collection of child processes, as each bidding model is its own dedicated process. New processes \(new _bidding model_ instances\) are spawned by executing the command passed to `--model`. These processes are automatically terminated \(via `SIGKILL`\) by the keeper shortly after their associated auctions expire.
+`auction-keeper` maintains a collection of child processes, as each bidding model is its own dedicated process. New processes (new _bidding model_ instances) are spawned by executing the command passed to `--model`. These processes are automatically terminated (via `SIGKILL`) by the keeper shortly after their associated auctions expire.
 
 Whenever the _bidding model_ process dies, it gets automatically respawned by the keeper.
 
@@ -28,11 +28,10 @@ Bidding models should never make an assumption that messages will be sent only w
 
 At the same time, the `auction-keeper` reads one-line messages from the **standard output** of the bidding model process and tries to parse them as JSON documents. It then extracts two fields from that document:
 
-* `price` - the maximum \(for debt auctions\) or the minimum \(for surplus auctions\) price
+*   `price` - the maximum (for debt auctions) or the minimum (for surplus auctions) price
 
-  the model is willing to bid. This value is ignored for fixed discount collateral auctions
-
-* `gasPrice` \(optional\) - gas price in WEI to use when sending the bid
+    the model is willing to bid. This value is ignored for fixed discount collateral auctions
+* `gasPrice` (optional) - gas price in WEI to use when sending the bid
 
 ## Processing each bidding model output and submitting bids
 
@@ -62,7 +61,7 @@ Any messages written by a _bidding model_ to **stderr** will be passed through b
 
 ## Simplest possible bidding model
 
-```text
+```
 #!/usr/bin/env bash
 while true; do
   echo "{\"price\": \"723.0\"}"
@@ -72,7 +71,7 @@ done
 
 Specifying a gas price is optional. If you want to start with a fixed gas price, you can add it like this:
 
-```text
+```
 #!/usr/bin/env bash
 
 while true; do
@@ -81,13 +80,13 @@ while true; do
 done
 ```
 
-The model produces price\(s\) for the keeper. After the `sleep` period, the keeper will restart the price model and read new price\(s\).
+The model produces price(s) for the keeper. After the `sleep` period, the keeper will restart the price model and read new price(s).
 
 ## Collateral bidding models
 
-**Note:** Currently, collateral keepers buy collateral at a fixed discount \(specified in the auction house smart contract\) and don't bid prices. So they should use a blank model file like this:
+**Note:** Currently, collateral keepers buy collateral at a fixed discount (specified in the auction house smart contract) and don't bid prices. So they should use a blank model file like this:
 
-```text
+```
 #!/usr/bin/env bash
 while true; do
   echo "{}"

@@ -2,11 +2,11 @@
 
 `GEB` uses different numbers representing various levels of precision.
 
-| Type | Precision |
-| :--- | :--- |
-| `Wad` | 1E-18 |
-| `Ray` | 1E-27 |
-| `Rad` | 1E-45 |
+| Type  | Precision |
+| ----- | --------- |
+| `Wad` | 1E-18     |
+| `Ray` | 1E-27     |
+| `Rad` | 1E-45     |
 
 You can import them from pyflex:
 
@@ -78,7 +78,7 @@ Rad(10000000000000000000000000000)
 ```
 
 {% hint style="warning" %}
-During conversion \(`Rad` to `Ray`/`Wad` or `Ray` to `Wad`\) you may lose precision!
+During conversion (`Rad` to `Ray`/`Wad` or `Ray` to `Wad`) you may lose precision!
 {% endhint %}
 
 ```python
@@ -87,6 +87,3 @@ Wad(0)
 >>> Ray(Rad(20))
 Ray(0)
 ```
-
-
-

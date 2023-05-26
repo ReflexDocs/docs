@@ -79,19 +79,26 @@
 
 ## apis
 
-* [Page 9](apis/page-9.md)
+* [API Endpoints](apis/api-endpoints.md)
 
 ## Pyflex
 
 * [Page 10](pyflex/page-10.md)
+* [Page 5](pyflex/page-5.md)
+* [Numerics](pyflex/numerics.md)
 
 ## keepers
 
-* [Page 11](keepers/page-11.md)
+* [Keepers Overview](keepers/keepers-overview.md)
+* [Page 1](keepers/page-1.md)
+* [Page 2](keepers/page-2.md)
+* [Page 3](keepers/page-3.md)
+* [Page 4](keepers/page-4.md)
+* [Bidding Models](keepers/bidding-models.md)
 
 ## liquidation protection
 
 * [SAFE Protection](liquidation-protection/safe-protection.md)
 * [Liquidation Protection Guide](liquidation-protection/liquidation-protection-guide.md)
-* [Uni-V2 RAI/ETH Savior Details](liquidation-protection/uni-v2-rai-eth-savior-details.md)
-* [Curve V1 Savior Details](liquidation-protection/curve-v1-savior-details.md)
+* [Uni-V2 RAI/ETH Savior Details](liquidation-protection/page-2.md)
+* [Curve V1 Savior Details](liquidation-protection/page-3.md)

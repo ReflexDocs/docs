@@ -67,12 +67,12 @@
 
 ## Proxy Infrastructure
 
-* [DSProxy](proxy-infrastructure/dsproxy.md)
+* [DSProxy](proxy-infrastructure/page-6.md)
 * [Proxy Registry](proxy-infrastructure/proxy-registry.md)
 
 ## Helper Contracts
 
-* [SAFE Manager](helper-contracts/safe-manager.md)
+* [SAFE Manager](helper-contracts/page-7.md)
 
 ## Geb.js
 

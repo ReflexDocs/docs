@@ -4,15 +4,15 @@ description: Running a collateral auction-keeper in a docker container.
 
 # Running in Docker
 
-## 1\) Get RAI
+## 1) Get RAI
 
 Buy RAI from Uniswap v2 or [open a SAFE](https://app.gitbook.com/@reflexer-labs/s/geb/pyflex/safe-management/opening-a-safe) and generate it.
 
-## 2\) Create the keeper run file
+## 2) Create the keeper run file
 
 Create a file called `run_auction_keeper.sh` and paste the following code in it:
 
-```text
+```
 #!/bin/bash
 
 docker run -it \
@@ -42,11 +42,11 @@ For more information about this keystore format and how to generate them:
 
 `chmod +x run_auction_keeper.sh`
 
-## 3\) Start the keeper and enter your keystore file password
+## 3) Start the keeper and enter your keystore file password
 
 `./run_auction_keeper.sh`
 
-```text
+```
 $ ./run_auction_keeper.sh
 latest: Pulling from reflexer/auction-keeper
 Digest: sha256:7e55ec9b0a136fc903d9f7f2690538bcbde9029d957e0e6f84d0282790f9666a
@@ -54,4 +54,3 @@ Status: Downloaded newer image for reflexer/auction-keeper:latest
 docker.io/reflexer/auction-keeper:latest
 Password for /keystore/key.json:
 ```
-

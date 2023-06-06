@@ -21,7 +21,7 @@ You probably want to modify the following variables in `models/surplus_model.py`
 
 Then, use `chmod +x surplus_model.py`.
 
-For more information about bidding models, see [Bidding Models](../BiddingModels.md).
+For more information about bidding models, see [Bidding Models](https://github.com/reflexer-labs/geb-docs/blob/master/keepers/BiddingModels.md).
 
 ## 2. Modify the keeper run file
 

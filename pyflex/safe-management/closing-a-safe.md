@@ -21,4 +21,3 @@ Pay back system coins to the `SAFE` and withdraw collateral:
 ```python
 >>> geb.collateral.adapter.exit(our_address, Wad.from_number(0.2)).transact()
 ```
-

@@ -86,4 +86,3 @@ Rad(85000000000000000000000000000000000000000000)
 ```python
 >>> geb.system_coin_adapter.exit(our_address, debt_amount).transact()
 ```
-

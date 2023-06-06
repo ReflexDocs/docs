@@ -109,16 +109,28 @@
 * [Getting Started](pyflex/getting-started/README.md)
   * [Configuration](pyflex/getting-started/configuration.md)
   * [GEB Basics](pyflex/getting-started/geb-basics.md)
-* [SAFE Management](pyflex/safe-management.md)
+* [SAFE Management](pyflex/safe-management/README.md)
+  * [Opening a SAFE](pyflex/safe-management/opening-a-safe.md)
+  * [Closing a SAFE](pyflex/safe-management/closing-a-safe.md)
 * [Numerics](pyflex/numerics.md)
 
 ## keepers
 
 * [Keepers Overview](keepers/keepers-overview.md)
-* [Page 1](keepers/page-1.md)
-* [Page 2](keepers/page-2.md)
-* [Page 3](keepers/page-3.md)
-* [Page 4](keepers/page-4.md)
+* [Collateral Auction Keeper](keepers/collateral-auction-keeper/README.md)
+  * [Running in Docker](keepers/collateral-auction-keeper/running-in-docker.md)
+  * [Running on a Host](keepers/collateral-auction-keeper/running-on-a-host.md)
+  * [Liquidations & Collateral Auctions](keepers/collateral-auction-keeper/liquidations-and-collateral-auctions.md)
+  * [Collateral Auction Flash Swaps](keepers/collateral-auction-keeper/collateral-auction-flash-swaps.md)
+* [Debt Auction Keeper](keepers/debt-auction-keeper/README.md)
+  * [Running in Docker](keepers/debt-auction-keeper/running-in-docker.md)
+  * [Running on a Host](keepers/debt-auction-keeper/running-on-a-host.md)
+* [Staked Token Auction Keeper](keepers/staked-token-auction-keeper/README.md)
+  * [Running in Docker](keepers/staked-token-auction-keeper/running-in-docker.md)
+  * [Running on a Host](keepers/staked-token-auction-keeper/running-on-a-host.md)
+* [Surplus Auction Keeper](keepers/surplus-auction-keeper/README.md)
+  * [Running in Docker](keepers/surplus-auction-keeper/running-in-docker.md)
+  * [Running on a Host](keepers/surplus-auction-keeper/running-on-a-host.md)
 * [Bidding Models](keepers/bidding-models.md)
 
 ## liquidation protection

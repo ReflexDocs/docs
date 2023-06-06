@@ -44,7 +44,7 @@ You probably want to modify the following variables in `models/debt_model.py`:
 
 `chmod +x debt_model.py`
 
-For more information about bidding models, see [Bidding Models](../bidding-models.md)
+For more information about bidding models, see [Bidding Models](broken-reference)
 
 ## 3) Modify keeper run file
 
@@ -163,5 +163,5 @@ Password for /keystore/keystore.json:
 2021-01-20 04:16:53,216 INFO     Instantiated model using process '/models/debt_model.sh --id 8 --debt_auction_house 0xBD0E4aC6061Df1eA95CaDfb04707892cCb750531'
 2021-01-20 04:16:53,236 INFO     Process '/models/debt_model.sh --id 8 --debt_auction_house 0xBD0E4aC6061Df1eA95CaDfb04707892cCb750531' (pid #44) started
 2021-01-20 04:16:53,252 INFO     Checked auctions 0 to 8 in 0 seconds
-2021-01-20 04:16:54,094 INFO     Initiating a debt auction with unqueued_unauctioned_debt=323.847533519600184184235424734624945830526550734
+2021-01-20 04:16:54,094 INFO     Initiating a debt auction with unqueued_unauctioned_debt=3
 ```

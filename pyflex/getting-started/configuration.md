@@ -19,6 +19,3 @@ Finally, configure a `geb` object. This object allows you to access most contrac
 ```python
 >>> geb = GfDeployment.from_node(web3, 'rai')
 ```
-
-
-

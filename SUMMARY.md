@@ -94,7 +94,11 @@
 
 * [Getting Started](geb.js/getting-started.md)
 * [Global Settlement Guide](geb.js/global-settlement-guide.md)
-* [API Reference](geb.js/api-reference.md)
+* [API Reference](geb.js/api-reference/README.md)
+  * [Geb](geb.js/api-reference/geb.md)
+  * [Safe](geb.js/api-reference/safe.md)
+  * [Proxy Actions](geb.js/api-reference/proxy-actions.md)
+  * [Geb Admin](geb.js/api-reference/geb-admin.md)
 
 ## apis
 
@@ -102,8 +106,10 @@
 
 ## Pyflex
 
-* [Page 10](pyflex/page-10.md)
-* [Page 5](pyflex/page-5.md)
+* [Getting Started](pyflex/getting-started/README.md)
+  * [Configuration](pyflex/getting-started/configuration.md)
+  * [GEB Basics](pyflex/getting-started/geb-basics.md)
+* [SAFE Management](pyflex/safe-management.md)
 * [Numerics](pyflex/numerics.md)
 
 ## keepers

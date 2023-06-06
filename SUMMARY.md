@@ -72,12 +72,12 @@
   * [Increasing Treasury Reimbursement](system-contracts/sustainability-module/increasing-treasury-reimbursement.md)
   * [Mandatory Fixed Treasury Reimbursement](system-contracts/sustainability-module/mandatory-fixed-treasury-reimbursement.md)
   * [Increasing Reward Relayer](system-contracts/sustainability-module/increasing-reward-relayer.md)
-* [Automation Module](system-contracts/automation-module/README.md)
+* [Automation Module](system-contracts/automation-module.md)
   * [Single Spot Debt Ceiling Setter](system-contracts/automation-module/single-spot-debt-ceiling-setter.md)
   * [ESM Threshold Setter](system-contracts/automation-module/esm-threshold-setter.md)
-* [Governance Module](system-contracts/governance-module/README.md)
+* [Governance Module](system-contracts/governance-module.md)
   * [DSPause](system-contracts/governance-module/dspause.md)
-* [Shutdown Module](system-contracts/shutdown-module/README.md)
+* [Shutdown Module](system-contracts/shutdown-module.md)
   * [Global Settlement](system-contracts/shutdown-module/global-settlement.md)
   * [ESM](system-contracts/shutdown-module/esm.md)
 
@@ -92,7 +92,9 @@
 
 ## Geb.js
 
-* [Page 8](geb.js/page-8.md)
+* [Getting Started](geb.js/getting-started.md)
+* [Global Settlement Guide](geb.js/global-settlement-guide.md)
+* [API Reference](geb.js/api-reference.md)
 
 ## apis
 

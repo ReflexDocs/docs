@@ -4,11 +4,11 @@ description: The protocol's recapitalization source
 
 # Protocol Token
 
-## 1. Summary <a id="1-introduction-summary"></a>
+## 1. Summary <a href="#1-introduction-summary" id="1-introduction-summary"></a>
 
 The protocol token is a [DsDelegateToken](https://github.com/reflexer-labs/ds-token/blob/master/src/delegate.sol) that provides logic for burning and authorized minting of new tokens as well as delegation capabilities.
 
-## 2. Contract Variables & Functions <a id="2-contract-details"></a>
+## 2. Contract Variables & Functions <a href="#2-contract-details" id="2-contract-details"></a>
 
 **Variables**
 
@@ -67,7 +67,6 @@ The protocol token is a [DsDelegateToken](https://github.com/reflexer-labs/ds-to
   * `previousBalance` - the delegate's previous vote balance
   * `newBalance` - the delegate's new vote balance
 
-## 3. Walkthrough <a id="3-key-mechanisms-and-concepts"></a>
+## 3. Walkthrough <a href="#3-key-mechanisms-and-concepts" id="3-key-mechanisms-and-concepts"></a>
 
 Along with the standard ERC20 token interface, the protocol token also has [DSAuth](https://github.com/reflexer-labs/ds-auth)-protected mint and burn functions.
-

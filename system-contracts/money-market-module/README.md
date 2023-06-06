@@ -10,17 +10,17 @@ description: Interest rate setters and collectors
 
 ## 1. Overview
 
-The **Money Market Module** contains the components that governance \(or an autonomous rate setter\) can use to set and collect stability fees.
+The **Money Market Module** contains the components that governance (or an autonomous rate setter) can use to set and collect stability fees.
 
 ## 2. Component Descriptions
 
-* The `TaxCollector` imposes fees on all collateral types and distributes them to various parties. Each collateral's stability fee is composed out of a `globalStabilityFee` \(a base fee applied to all collateral types\) and its own, unique `CollateralType.stabilityFee`.
+* The `TaxCollector` imposes fees on all collateral types and distributes them to various parties. Each collateral's stability fee is composed out of a `globalStabilityFee` (a base fee applied to all collateral types) and its own, unique `CollateralType.stabilityFee`.
 
 ## 3. Risks
 
-### Smart Contract Bugs <a id="coding-errors"></a>
+### Smart Contract Bugs <a href="#coding-errors" id="coding-errors"></a>
 
-A bug in the `TaxCollector` would make it so that the system could no longer accrue surplus \(which is used to settle bad debt and pay for other system operations\) and thus components that depend on a constant stream of fees would likely stop working properly.
+A bug in the `TaxCollector` would make it so that the system could no longer accrue surplus (which is used to settle bad debt and pay for other system operations) and thus components that depend on a constant stream of fees would likely stop working properly.
 
 ### Improper Maintenance
 
@@ -39,4 +39,3 @@ Governance can choose to keep bounded control over setting rates by clearly spec
 
 This is to ensure that the protocol offers more advantageous rates during some periods while it can also collect more surplus when needed.
 {% endhint %}
-

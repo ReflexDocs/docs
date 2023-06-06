@@ -4,11 +4,11 @@ description: Wrapper for FSM-like contracts
 
 # FSM Wrapper
 
-## 1. Summary <a id="1-introduction-summary"></a>
+## 1. Summary <a href="#1-introduction-summary" id="1-introduction-summary"></a>
 
 The `FSMWrapper` is meant to act as a funding source for FSM-like contracts as well as an interface that allows other contracts to read data from the FSM integrated with the wrapper.
 
-## 2. Contract Variables & Functions <a id="2-contract-details"></a>
+## 2. Contract Variables & Functions <a href="#2-contract-details" id="2-contract-details"></a>
 
 **Variables**
 
@@ -32,9 +32,8 @@ The `FSMWrapper` is meant to act as a funding source for FSM-like contracts as w
 * `getNextPriceUpperBound() public view returns (uint128)` - read and return the value calculated by `getNextPriceUpperBound` from the `fsm`
 * `getResultWithValidity() external view returns (uint256, bool)` - read and return the current result and its validity from the `fsm`
 * `getNextResultWithValidity() external view returns (uint256, bool)` - read and return the next result and its validity from the `fsm`
-* `read() external view returns (uint256)` - read and return \(or revert\) the current result from the `fsm` 
+* `read() external view returns (uint256)` - read and return (or revert) the current result from the `fsm`&#x20;
 
-## 3. Walkthrough <a id="2-contract-details"></a>
+## 3. Walkthrough <a href="#2-contract-details" id="2-contract-details"></a>
 
 Anyone can read values from the `fsm` contract by calling the wrapper `view` functions. The `fsm` contract is allowed to call `renumerateCaller` and thus send stability fee rewards to an address.
-

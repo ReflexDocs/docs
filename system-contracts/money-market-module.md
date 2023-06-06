@@ -1,2 +1,0 @@
-# Money Market Module
-

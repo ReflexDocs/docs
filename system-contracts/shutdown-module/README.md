@@ -4,7 +4,7 @@ description: Winding down system operations
 
 # Shutdown Module
 
-**Relevant smart contracts:**
+**elevant smart contracts:**
 
 * [GlobalSettlement](https://github.com/reflexer-labs/geb/blob/master/src/single/GlobalSettlement.sol)
 * [ESM](https://github.com/reflexer-labs/esm/blob/master/src/ESM.sol)

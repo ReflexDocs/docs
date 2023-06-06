@@ -22,7 +22,7 @@ The **Automation Module** is a set of contracts that automate parameter setting 
 
 ## 3. Risks
 
-### Smart Contract Bugs <a id="coding-errors"></a>
+### Smart Contract Bugs <a href="#coding-errors" id="coding-errors"></a>
 
 * A bug in the `CollateralAuctionThrottler` could prevent the `LiquidationEngine` from liquidating any SAFE by setting `onAuctionSystemCoinLimit` to an extremely low value
 * A bug in the `SingleSpotDebtCeilingSetter` could set an extremely low ceiling or it could block any further ceiling updates and thus not allow the system to issue more system coins
@@ -31,12 +31,9 @@ The **Automation Module** is a set of contracts that automate parameter setting 
 ### Misconfiguration
 
 * Governance can misconfigure the throttler and make it compute extremely low values for the`onAuctionSystemCoinLimit`
-* Governance can also misconfigure the `SingleSpotDebtCeilingSetter` to the point where it stops calculating new ceilings \(by setting a large delay between recalculations\) or it can calculate large or low ceilings \(compared to the current amount of debt in the system\)
+* Governance can also misconfigure the `SingleSpotDebtCeilingSetter` to the point where it stops calculating new ceilings (by setting a large delay between recalculations) or it can calculate large or low ceilings (compared to the current amount of debt in the system)
 * `ESMThresholdSetter` can be misconfigured and it can set extremely high or extremely low thresholds in the `ESM`
 
 ## 4. Governance Minimization
 
 All the automation contracts are part of Level 2 governance minimization.
-
-
-
